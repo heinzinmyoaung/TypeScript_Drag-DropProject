@@ -41,7 +41,7 @@ export class SingleProject extends Component<HTMLUListElement,HTMLLIElement> imp
     dragStartHandler(event: DragEvent ): void {
         event.dataTransfer!.setData('text/plain', this.project.id)
         event.dataTransfer!.effectAllowed = "move"
-        console.log(event)
+        // console.log(event)
 
     }
 

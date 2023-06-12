@@ -10,7 +10,6 @@ export class State<T>{
     
     addListener(listenerFn: Listener<T>){
         this.listeners.push(listenerFn)
-        console.log(listenerFn)
     }
 
 }
@@ -25,7 +24,7 @@ export class ProjectState extends State<Project>{
 
     static getInstance(){
         if(this.instance){
-            console.log(this.instance)
+            // console.log(this.instance)
             return this.instance
         }
         this.instance = new ProjectState()
@@ -53,7 +52,7 @@ export class ProjectState extends State<Project>{
 
         for (const listenerFn of this.listeners) {
             listenerFn(this.projectArr.slice());
-            console.log(listenerFn)
+            // console.log(listenerFn)
 
         }
     }

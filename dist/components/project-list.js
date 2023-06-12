@@ -31,7 +31,6 @@ export class ProjectList extends Component {
     dropHandler(event) {
         const prjId = event.dataTransfer.getData('text/plain');
         projectState.moveFinished(prjId, this.type === 'active' ? ProjectStatus.Active : ProjectStatus.Finished);
-        console.log(prjId);
     }
     configure() {
         this.element.addEventListener('dragover', this.dragOverHandler);

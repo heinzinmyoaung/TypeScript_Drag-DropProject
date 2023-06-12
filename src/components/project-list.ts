@@ -6,7 +6,6 @@ import { SingleProject } from './project-item.js';
 import { DragTarget } from '../models/drap-drop.js';
 
 
-
 //// ProjectList templete section to move in Div'app' and assign Div 'id' 
 export class ProjectList extends Component <HTMLDivElement, HTMLElement> implements DragTarget {
 
@@ -42,7 +41,7 @@ export class ProjectList extends Component <HTMLDivElement, HTMLElement> impleme
             prjId,
             this.type === 'active' ? ProjectStatus.Active : ProjectStatus.Finished
         )
-        console.log(prjId)
+        // console.log(prjId)
 
 
     }

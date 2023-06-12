@@ -5,7 +5,6 @@ export class State {
     }
     addListener(listenerFn) {
         this.listeners.push(listenerFn);
-        console.log(listenerFn);
     }
 }
 export class ProjectState extends State {
@@ -15,7 +14,6 @@ export class ProjectState extends State {
     }
     static getInstance() {
         if (this.instance) {
-            console.log(this.instance);
             return this.instance;
         }
         this.instance = new ProjectState();
@@ -36,7 +34,6 @@ export class ProjectState extends State {
     updateListeners() {
         for (const listenerFn of this.listeners) {
             listenerFn(this.projectArr.slice());
-            console.log(listenerFn);
         }
     }
 }

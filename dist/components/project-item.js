@@ -33,7 +33,6 @@ export class SingleProject extends Component {
     dragStartHandler(event) {
         event.dataTransfer.setData('text/plain', this.project.id);
         event.dataTransfer.effectAllowed = "move";
-        console.log(event);
     }
     dragEndHandler(_) {
         console.log("end");
